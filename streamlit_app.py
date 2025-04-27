@@ -6,8 +6,10 @@ from openai import OpenAI
 # ──────────────────────────────────────────────────────────────────────────────
 st.title("Vita AI")
 
+api_key = st.secrets["OPENAI_API_KEY"]
+
 client = OpenAI(
-    api_key="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"
+    api_key=api_key
 )
 
 st.session_state.setdefault("openai_model", "gpt-3.5-turbo")
